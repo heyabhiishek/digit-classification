@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Handwritten Digit AI</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="app-card">
+
+            <!-- HEADER -->
+            <header class="header">
+
+                <div class="brand">
+
+                    <div class="brand-mark">
+                        AI
+                    </div>
+
+                    <div class="brand-text">
+                        <h1>Handwritten Digit AI</h1>
+
+                        <p>
+                            Recognize handwritten numbers using machine learning
+                        </p>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- MAIN HORIZONTAL AREA -->
+            <div class="workspace">
+
+                <!-- DRAWING PANEL -->
+                <section class="draw-panel">
+
+                    <div class="section-heading">
+
+                        <span class="step">
+                            1
+                        </span>
+
+                        <div>
+                            <h2>Draw a digit</h2>
+
+                            <p>
+                                Write a number from 0 to 9
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="canvas-container">
+
+                        <canvas
+                            id="canvas"
+                            width="500"
+                            height="300"
+                        ></canvas>
+
+                    </div>
+
+
+                    <div class="actions">
+
+                        <button
+                            id="predictBtn"
+                            class="primary-button"
+                            type="button"
+                        >
+                            Predict
+                        </button>
+
+                        <button
+                            id="clearBtn"
+                            class="secondary-button"
+                            type="button"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- DIVIDER -->
+                <div class="vertical-divider"></div>
+
+
+                <!-- RESULT PANEL -->
+                <section class="result-panel">
+
+                    <div class="section-heading">
+
+                        <span class="step">
+                            2
+                        </span>
+
+                        <div>
+                            <h2>Prediction</h2>
+
+                            <p>
+                                Neural network result
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-box">
+
+                        <div
+                            id="prediction"
+                            class="prediction"
+                        >
+                            Ready
+                        </div>
+
+                        <span
+                            id="confidence"
+                            class="confidence"
+                        >
+                            Draw a digit and click Predict
+                        </span>
+
+                    </div>
+
+
+                    <div class="result-note">
+                        <span class="status-dot"></span>
+
+                        <span>
+                            Ready to analyze
+                        </span>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                <span>MNIST</span>
+
+                <span class="dot">•</span>
+
+                <span>Neural Network</span>
+
+                <span class="dot">•</span>
+
+                <span>FastAPI</span>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>

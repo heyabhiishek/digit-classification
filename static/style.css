@@ -1,0 +1,567 @@
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    font-family:
+        Roboto,
+        Arial,
+        Helvetica,
+        sans-serif;
+    background: #f5f5f5;
+    color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   PAGE CONTAINER
+   ========================================================= */
+
+.page {
+    width: 100%;
+    max-width: 1200px;
+    padding: 24px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.app-card {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    padding: 24px 32px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-mark {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4285f4;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.brand-text h1 {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #212121;
+}
+
+.brand-text p {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #757575;
+}
+
+
+/* =========================================================
+   HORIZONTAL WORKSPACE
+   ========================================================= */
+
+.workspace {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        1px
+        minmax(0, 1fr);
+    min-height: 440px;
+}
+
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.draw-panel,
+.result-panel {
+    padding: 30px 36px;
+}
+
+.draw-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.step {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    color: #616161;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.section-heading h2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #424242;
+}
+
+.section-heading p {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #757575;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.vertical-divider {
+    width: 1px;
+    background: #eeeeee;
+}
+
+
+/* =========================================================
+   CANVAS
+   ========================================================= */
+
+.canvas-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#canvas {
+    display: block;
+
+    width: 100%;
+    height: 300px;
+
+    background: #000000;
+
+    border: 1px solid #bdbdbd;
+
+    border-radius: 2px;
+
+    cursor: crosshair;
+
+    touch-action: none;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+button {
+    height: 38px;
+    padding: 0 20px;
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition:
+        background 120ms ease,
+        box-shadow 120ms ease;
+}
+
+
+/* =========================================================
+   PRIMARY
+   ========================================================= */
+
+.primary-button {
+    background: #4285f4;
+    color: #ffffff;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.20);
+}
+
+.primary-button:hover {
+    background: #3367d6;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.20);
+}
+
+.primary-button:active {
+    background: #2f5fbe;
+}
+
+
+/* =========================================================
+   SECONDARY
+   ========================================================= */
+
+.secondary-button {
+    background: #ffffff;
+    color: #424242;
+    border: 1px solid #bdbdbd;
+}
+
+.secondary-button:hover {
+    background: #f5f5f5;
+}
+
+.secondary-button:active {
+    background: #eeeeee;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+button:focus-visible {
+    outline: 2px solid #4285f4;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   DISABLED PREDICT
+   ========================================================= */
+
+.primary-button:disabled {
+    background: #bdbdbd;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.primary-button:disabled:hover {
+    background: #bdbdbd;
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   RESULT BOX
+   ========================================================= */
+
+.result-box {
+    flex: 1;
+    min-height: 330px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+}
+
+.prediction {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1;
+    color: #212121;
+}
+
+.confidence {
+    display: block;
+    max-width: 230px;
+    margin-top: 12px;
+    padding: 0 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #757575;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.result-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 13px;
+    font-size: 11px;
+    color: #9e9e9e;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #9e9e9e;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    min-height: 42px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid #eeeeee;
+    font-size: 10px;
+    color: #9e9e9e;
+    letter-spacing: 0.2px;
+}
+
+.footer .dot {
+    color: #bdbdbd;
+}
+
+
+/* =========================================================
+   GOOGLE-STYLE PREDICTION LOADER
+   ========================================================= */
+
+.prediction.loading {
+    font-size: 0;
+}
+
+.prediction.loading::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    border-top-color: #757575;
+    animation:
+        google-spin 0.8s linear infinite;
+}
+
+@keyframes google-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP
+   ========================================================= */
+
+@media (max-height: 800px) and (min-width: 701px) {
+
+    .page {
+        padding: 16px 20px;
+    }
+
+    .header {
+        padding: 18px 28px;
+    }
+
+    .draw-panel,
+    .result-panel {
+        padding: 22px 30px;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 270px;
+    }
+
+    .result-box {
+        min-height: 270px;
+    }
+
+    .workspace {
+        min-height: 350px;
+    }
+
+    .footer {
+        min-height: 36px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        align-items: flex-start;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+    .workspace {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .vertical-divider {
+        width: auto;
+        height: 1px;
+        margin: 0 24px;
+    }
+
+    .draw-panel,
+    .result-panel {
+        padding: 24px;
+    }
+
+    .result-box {
+        min-height: 180px;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .page {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .brand {
+        gap: 11px;
+    }
+
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+    }
+
+    .brand-text h1 {
+        font-size: 19px;
+    }
+
+    .brand-text p {
+        font-size: 11px;
+    }
+
+    .draw-panel,
+    .result-panel {
+        padding: 20px;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 220px;
+    }
+
+    .actions {
+        width: 100%;
+    }
+
+    button {
+        flex: 1;
+    }
+
+    .result-box {
+        min-height: 170px;
+    }
+
+    .prediction {
+        font-size: 30px;
+    }
+
+    .footer {
+        justify-content: center;
+        padding: 0 15px;
+        font-size: 9px;
+    }
+}
